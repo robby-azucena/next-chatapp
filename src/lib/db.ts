@@ -1,6 +1,9 @@
-import {Redis} from '@upstash/redis'
+import {Redis, RedisConfigNodejs} from '@upstash/redis'
 
-export const db = new Redis({
-    url: process.env.UPSTASH_REDIS_REST_URL,
-    token: process.env.UPSTAH_REDIS_REST_TOKEN
-})
+
+const requester:RedisConfigNodejs = {
+    url: process.env.UPSTASH_REDIS_REST_URL!,
+    token: process.env.UPSTAH_REDIS_REST_TOKEN!
+};
+
+export const db = new Redis(requester)
