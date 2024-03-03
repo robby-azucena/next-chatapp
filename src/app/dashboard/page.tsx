@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { DashboardPage } from "@/modules/dashboard/dashboard_page";
 
-export default function Dashboard() {
-  return (<Button>Hello</Button>)
-}
+const Dashboard = () => {
+  return <DashboardPage />;
+};
+
+export default Dashboard;

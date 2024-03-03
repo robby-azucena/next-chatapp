@@ -19,7 +19,7 @@ const getGoogleCredentials = () => {
 };
 
 export const authOptions: NextAuthOptions = {
-  adapter: UpstashRedisAdapter(db),
+  adapter: UpstashRedisAdapter(db), // This is the one who puts the google account details in the db
   session: {
     strategy: "jwt",
   },
